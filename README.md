@@ -1,3 +1,3 @@
 # js-projects
 
-description
+description for the sample projects
