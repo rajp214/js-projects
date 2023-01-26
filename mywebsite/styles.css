@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: orange;
+
+}
+.header{
+    
+    min-height:100vh;
+    width: 100%;
+    position: relative;
+    
+}
+nav{
+    margin-bottom: 4px;
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 150px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;   
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 19px;
+
+}
+
+.nav-links ul li::after{
+    content:'';
+    width: 0%;
+    height: 4px;
+    background: blue;
+    display: block;
+    margin: auto;
+    transition: 0.2s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    color: white;
+    width: 90%;
+    border: 1px black solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin:19px 0 40px;
+    font-size:17px;
+}
+
+.text-box a{
+    margin-bottom: 40px;
+}
+
+.hero-btn{
+    padding: 12px 34px;
+    display: inline-block;
+    text-decoration: none;
+    border: 3px solid orange;
+    position: relative;
+    background: transparent;
+    cursor: pointer;
+
+}
+
+.hero-btn:hover{
+    color: white;
+    background-color: orange;
+    transition: 0.5s;
+}
+
+nav .fa{
+    display: none;
+}
+
+@media(max-width:700px){
+    .text-box h1{
+        font-size:20px ;
+    }
+
+    .nav-links ul li{
+        display: block;
+    }
+    
+    .nav-links{
+        position: absolute;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+}
+
+
+
